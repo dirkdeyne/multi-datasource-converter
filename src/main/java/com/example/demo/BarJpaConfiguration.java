@@ -36,7 +36,7 @@ public class BarJpaConfiguration {
     public LocalContainerEntityManagerFactoryBean barEntityManagerFactory(
             EntityManagerFactoryBuilder builder, @Qualifier("barDataSource") DataSource dataSource) {
         return builder.dataSource(dataSource).packages("com.example.demo.bar").persistenceUnit("bar")
-                .properties(Map.of("hibernate.hbm2ddl.auto","create-drop"))
+                .properties(Map.of("hibernate.hbm2ddl.auto","create-drop")) // drop and create database on startup
                 .build();
     }
 

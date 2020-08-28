@@ -39,7 +39,7 @@ public class FooJpaConfiguration {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
             EntityManagerFactoryBuilder builder, @Qualifier("dataSource") DataSource dataSource) {
         return builder.dataSource(dataSource).packages("com.example.demo.foo").persistenceUnit("foo")
-                .properties(Map.of("hibernate.hbm2ddl.auto","create-drop"))
+                .properties(Map.of("hibernate.hbm2ddl.auto","create-drop")) // drop and create database on startup
                 .build();
     }
 
