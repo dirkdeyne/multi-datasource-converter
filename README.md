@@ -9,7 +9,7 @@ Demo application as answer for [SO-question](https://stackoverflow.com/questions
  - localhost:8080/foo/1
  - localhost:8080/bar/1
  
- localhost/h2-console to see data:
+ localhost/h2-console to see _'encrypted'_ data:
  - user: sa
  - password:
  - JDBC URL: jdbc:h2:mem:bar or jdbc:h2:mem:foo
